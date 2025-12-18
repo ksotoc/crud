@@ -13,3 +13,4 @@ CREATE TABLE products (
 );
 
 pip install -r dependencias.txt
+static/uploads
