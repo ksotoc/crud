@@ -11,3 +11,5 @@ CREATE TABLE products (
     precio DECIMAL(10,2),
     imagen VARCHAR(255)
 );
+
+pip install -r dependencias.txt
