@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Editar producto{% endblock %}
+
+{% block content %}
+<h2>Editar producto</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="text" name="nombre" value="{{ producto[1] }}" required><br><br>
+
+    <textarea name="descripcion">{{ producto[2] }}</textarea><br><br>
+
+    <input type="number" name="precio" step="0.01" value="{{ producto[3] }}"><br><br>
+
+    <p>Imagen actual:</p>
+    <img src="{{ url_for('static', filename='uploads/' ~ producto[4]) }}" width="120"><br><br>
+
+    <input type="file" name="imagen"><br><br>
+
+    <button type="submit">Actualizar</button>
+    <a href="/productos" style="margin-left:10px;">Volver</a>
+</form>
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sistema{% endblock %}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
+
+        header {
+            background: #2c7be5;
+            color: white;
+            padding: 12px 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .user-info {
+            float: right;
+        }
+
+        .container {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/productos">Productos</a>
+
+    {% if current_user.is_authenticated %}
+        <div class="user-info">
+            Usuario: <strong>{{ current_user.username }}</strong>
+            |
+            <a href="/logout">Cerrar sesión</a>
+        </div>
+    {% endif %}
+</header>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

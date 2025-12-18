@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+        .box {
+            width: 350px;
+            margin: 120px auto;
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #ddd;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+        button {
+            background: #2c7be5;
+            color: #fff;
+            border: none;
+        }
+        a {
+            display: block;
+            text-align: center;
+            color: #2c7be5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Iniciar sesión</h2>
+    <form method="POST">
+        <input name="username" placeholder="Usuario" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button>Ingresar</button>
+    </form>
+    <a href="/register">Registrarse</a>
+</div>
+
+</body>
+</html>
